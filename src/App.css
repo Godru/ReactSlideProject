@@ -1,32 +1,378 @@
-.App {
-  text-align: center;
+body{
+    position: relative;
+    overflow:  hidden;
+}
+.App{
+  height: 100vh;
+    position: relative;
+
+}
+.control__buttons{
+    z-index: 8;
+    position: fixed;
+    left: 20px;
+    top: 470px;
+}
+.button_1{
+    top:0;
+}
+.button_2{
+    top:60px;
+}
+.button_3{
+    top:120px;
+}
+.button_4{
+    top:180px;
+}
+.pause__block_1{
+    background-color: grey;
+    position: absolute;
+    left: 18px;
+    top: 13px;
+    width: 2px;
+    height: 25px;
+}
+.pause__block_2{
+    background-color: grey;
+    position: absolute;
+    left: 29px;
+    top: 13px;
+    width: 2px;
+    height: 25px;
+}
+.confirm__block_1{
+    transform: rotate(-45deg);
+    background-color: grey;
+    position: absolute;
+    left: 17px;
+    top: 23px;
+    width: 2px;
+    height: 12px;
+}
+.confirm__block_2{
+    transform: rotate(45deg);
+    background-color: grey;
+    position: absolute;
+    left: 29px;
+    top: 14px;
+    width: 2px;
+    height: 23px;
+}
+.cancel__block_1{
+    transform: rotate(45deg);
+    background-color: grey;
+    position: absolute;
+    left: 24px;
+    top: 13px;
+    width: 2px;
+    height: 25px;
+}
+.cancel__block_2{
+    transform: rotate(-45deg);
+    background-color: grey;
+    position: absolute;
+    left: 24px;
+    top: 13px;
+    width: 2px;
+    height: 25px;
+}
+.camera__block_1{
+    border: 2px solid grey;
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    width: 18px;
+    height: 13px;
+}
+.camera__block_2{
+    transform: rotate(-53deg);
+    background-color: grey;
+    position: absolute;
+    left: 20px;
+    top: 9px;
+    width: 2px;
+    height: 32px;
+}
+.camera__block_3{
+    transform: rotate(45deg);
+    background-color: grey;
+    position: absolute;
+    left: 34px;
+    top: 15px;
+    width: 2px;
+    height: 13px;
+}
+.camera__block_4{
+    transform: rotate(-45deg);
+    background-color: grey;
+    position: absolute;
+    left: 34px;
+    top: 22px;
+    width: 2px;
+    height: 13px;
+}
+.camera__block_5{
+    background-color: grey;
+    position: absolute;
+    left: 39px;
+    top: 16px;
+    width: 2px;
+    height: 17px;
+}
+.control__button{
+    position: absolute;
+    border: 0;
+    border-radius: 100px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    transition-duration: 0.5s;
+}
+.control__open{
+    padding-bottom: 10px;
+    font-size: 15px;
+    text-align: center;
+    border: 0;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    outline: none;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.clock{
+    margin-right: 5px;
+}
+.control__timer{
+    color: #868687;
+    padding: 0 5px 2px;
+    text-align: center;
+    height: 20px;
+    margin-left: 10px;
+    background-color: buttonface;
+    border: 0;
+    border-radius: 100px;
+    outline: none;
+}
+.control__panel{
+    margin-left: 10px;
+    margin-top: 250px;
+    display: flex;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
+.slide__buttons{
+    flex-flow: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+    top: 385px;
+    left: 980px;
+    position: fixed;
+    height: 50px;
+    width: 30px;
+    transition-duration: 1s;
+}
+.Slide_Button{
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    border: 6px solid #fff;
+    border-radius: 100px;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+
+}
+.down__button{
+    cursor: pointer;
+    border: 0;
+    z-index: 4;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    position: fixed;
+    width: 100vw;
+    height: 15%;
+    background: url('./img/down_button.png') no-repeat center bottom /contain;
+    bottom: 0;
+}
+.Box_1,.Box_2{
+  display: block;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    overflow: hidden;
+    transition: 1s ease-out;
+}
+.Tab_3, .Tab_2, .Tab_1{
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+
+}
+.Box_1{
+  position: relative;
+  background: url('./img/box_1.png') no-repeat center /contain;
+}
+.Box_2{
+    padding-top: 1px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -10px;
+    background: url('./img/box_2.png') no-repeat center top /contain;
+}
+.Tab_3{
+    background: url('./img/tab_3.png') no-repeat center top /contain;
+}
+.Tab_2{
+    margin-right: -1px;
+    background: url('./img/tab_2.png') no-repeat center top /contain;
+}
+.Tab_1{
+    margin-right: -1px;
+    background: url('./img/tab_1.png') no-repeat center top /contain;
+
+}
+.Tabs__view{
+    overflow: hidden;
+    position: relative;
+    /* margin-left: -2048px ;*/
+    margin-top: -1px;
+    height: 100%;
+    width: 100%;
+}
+.Tabs__list{
+    transition: 1s ease-out;
+    display: flex;
+    left: -2048px;
+    position: absolute;
+}
+.scroll__line{
+    top: 90vh;
+    display: flex;
+    left:275px;
+    z-index: 2;
+    width: 50vw;
+    height: 2vh;
+    position: absolute;
+}
+.scroll__line_white{
+    left:0;
+    position: absolute;
+    background: #d1eaff;
+    height: 100%;
+    width: 300px;
+}
+.scroll__line_black{
+    right:0;
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    background: #435063;
+}
+.scroll__tab{
+    z-index: 8;
+    top: 88.5vh;
+    background: url('./img/scroll_button.png') no-repeat center top /contain;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+}
+.transition_on{
+    transition: 1s ease-out;
+}
+.scroll__text_1, .scroll__text_2, .scroll__text_3{
+    z-index: 6;
+    display: block;
+    top: 94.5vh;
+    font-weight: bold;
+    position: absolute;
+    color: #fff;
+    bottom: -6vh;
+}
+.scroll__text_1{
+    left: 27%;
+}
+.scroll__text_2{
+    left: 50%;
+}
+.scroll__text_3{
+    left: 73%;
 }
 
-.App-link {
-  color: #61dafb;
+.circle_1{
+    margin: 52vh 0 0 279px;
 }
+.circle_2{
+    margin: 66vh 0 0 479px;
+}
+.circle_3{
+    margin: 30vh 0 0 562px;
+}
+.circle_4{
+    margin: 63vh 0 0 821px;
+}
+.Circle__outer{
+    display: flex;
+    border: 4px solid #CA7359;
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    align-items: center;
+}
+.Circle__moving{
+    box-sizing: border-box;
+    z-index: 1;
+    background-color: rgba(255, 186, 2,255);
+    border-radius: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+  /*  margin: -10px 0 0 -10px;*/
+    border: 2px solid #F69733;
+    animation: increase  2s infinite ease-out;
+}
+.moving_1{
+    animation-delay: -1s;
+}
+.moving_2{
+    animation-delay: 4.5s;
+}
+@keyframes increase {
+    from {
+        background-color: rgba(246, 151, 51, 1);
+        border-color: #F69733;
+        margin: 0 0 0 0;
+        transform: scale(0);
+        width: 0px;
+        height: 0px;
+    }
+    40%{
+        background-color: rgba(246, 151, 51, 1);
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    to {
+        background-color: rgba(246, 151, 51, 0);
+        border-color: #CA7359;
+        margin: -49.5% 0 0 -50%;
+        transform: scale(1);
+        }
 }
+/*.Circle__inner{
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 10px solid #F69733;
+    border-radius: 9px;
+    background-color: black;
+}*/

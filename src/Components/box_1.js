@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
 import '../App.css';
 
-class box_1 extends Component {
-  constructor(){
-    super(props);
-  }
-
-  render() {
-    return (
-      <div style ='background-image: url("./img/tab_3.png")'/>
-
-    );
-  }
+class Box_1 extends Component {
+    render() {
+        return (
+            <div className="Box_1"/>
+        );
+    }
 }
 
-export default box_1;
+export default Box_1;

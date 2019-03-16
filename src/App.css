@@ -2,8 +2,32 @@ body{
     position: relative;
     overflow:  hidden;
 }
+@font-face{
+    font-family: 'Gotham Pro';
+    src: url('/fonts/GothamPro.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Gotham Pro';
+    src: url('/fonts/GothamPro-light.ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Gotham Pro';
+    src: url('/fonts/GothamPro.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
 .App{
-  height: 100vh;
+    height: 100vh;
     position: relative;
 
 }
@@ -25,43 +49,44 @@ body{
 .button_4{
     top:180px;
 }
+
 .pause__block_1{
-    background-color: grey;
+    background-color: #717475;
     position: absolute;
-    left: 18px;
-    top: 13px;
+    left: 19px;
+    top: 16px;
     width: 2px;
-    height: 25px;
+    height: 20px;
 }
 .pause__block_2{
-    background-color: grey;
+    background-color: #717475;
     position: absolute;
     left: 29px;
-    top: 13px;
+    top: 16px;
     width: 2px;
-    height: 25px;
+    height: 20px;
 }
 .confirm__block_1{
     transform: rotate(-45deg);
-    background-color: grey;
+    background-color: #717475;
     position: absolute;
-    left: 17px;
+    left: 18px;
     top: 23px;
     width: 2px;
-    height: 12px;
+    height: 10px;
 }
 .confirm__block_2{
     transform: rotate(45deg);
     background-color: grey;
     position: absolute;
-    left: 29px;
-    top: 14px;
+    left: 28px;
+    top: 16px;
     width: 2px;
-    height: 23px;
+    height: 18px;
 }
 .cancel__block_1{
     transform: rotate(45deg);
-    background-color: grey;
+    background-color: #717475;
     position: absolute;
     left: 24px;
     top: 13px;
@@ -70,7 +95,7 @@ body{
 }
 .cancel__block_2{
     transform: rotate(-45deg);
-    background-color: grey;
+    background-color: #717475;
     position: absolute;
     left: 24px;
     top: 13px;
@@ -78,47 +103,47 @@ body{
     height: 25px;
 }
 .camera__block_1{
-    border: 2px solid grey;
+    border: 1px solid #717475;
     position: absolute;
-    left: 10px;
-    top: 16px;
-    width: 18px;
-    height: 13px;
+    left: 14px;
+    top: 18px;
+    width: 14px;
+    height: 12px;
 }
 .camera__block_2{
-    transform: rotate(-53deg);
-    background-color: grey;
+    transform: rotate(-50deg);
+    background-color: #717475;
     position: absolute;
-    left: 20px;
-    top: 9px;
-    width: 2px;
-    height: 32px;
+    left: 21px;
+    top: 12px;
+    width: 1px;
+    height: 26px;
 }
 .camera__block_3{
-    transform: rotate(45deg);
-    background-color: grey;
+    transform: rotate(50deg);
+    background-color: #717475;
     position: absolute;
-    left: 34px;
-    top: 15px;
-    width: 2px;
-    height: 13px;
+    left: 33px;
+    top: 17px;
+    width: 1px;
+    height: 9px;
 }
 .camera__block_4{
-    transform: rotate(-45deg);
-    background-color: grey;
+    transform: rotate(-50deg);
+    background-color: #717475;
     position: absolute;
-    left: 34px;
-    top: 22px;
-    width: 2px;
-    height: 13px;
+    left: 33px;
+    top: 24px;
+    width: 1px;
+    height: 9px;
 }
 .camera__block_5{
-    background-color: grey;
+    background-color: #717475;
     position: absolute;
-    left: 39px;
-    top: 16px;
-    width: 2px;
-    height: 17px;
+    left: 36px;
+    top: 20px;
+    width: 1px;
+    height: 10px;
 }
 .control__button{
     position: absolute;
@@ -201,10 +226,99 @@ body{
     bottom: 0;
 }
 .Box_1,.Box_2{
-  display: block;
-  min-height: 100vh;
+    font-family: "Gotham Pro";
+    display: block;
+    min-height: 100vh;
     overflow: hidden;
-    transition: 1s ease-out;
+    transition: 0.5s ease-out;
+}
+.Box_1__title{
+    font-weight: 100;
+    left: 230px;
+    text-align: center;
+    width: 600px;
+    font-size: 50px;
+    color:white;
+    position: absolute;
+    transition: 0.5s ease-out;
+
+}
+.iceblock1{
+    position: absolute;
+    right: -3px;
+    width: 150px;
+    height: 210px;
+    background: url('./img/iceblock1.png') no-repeat center bottom /contain;
+    transition: 0.5s ease-out;
+}
+.iceblock2{
+    position: absolute;
+    left: 230px;
+    width: 100px;
+    height: 220px;
+    background: url('./img/iceblock2.png') no-repeat center bottom /contain;
+    transition: 0.5s ease-out;
+}
+.iceblock3{
+    position: absolute;
+    left: 85px;
+    width: 40px;
+    height: 40px;
+    background: url('./img/iceblock3.png') no-repeat center bottom /contain;
+    transition: 0.5s ease-out;
+}
+.iceblock4{
+    position: absolute;
+    right: 230px;
+    width: 80px;
+    height: 80px;
+    background: url('./img/iceblock4.png') no-repeat center bottom /contain;
+    transition: 0.5s ease-out;
+}
+.Box_2__title{
+    position: absolute;
+    top: 105px;
+    left: 100px;
+    font-size: 50px;
+    width: 800px;
+    color: #0d319c;
+    transition: 0.5s ease-out;
+}
+.Box_2__text_1{
+    font-family: 'Lato';
+    position: absolute;
+    top: 398px;
+    left: 222px;
+    font-size: 20px;
+    color: #0d319c;
+    transition: 0.5s ease-out;
+}
+.Box_2__text_2{
+    font-family: 'Lato';
+    position: absolute;
+    top: 505px;
+    left: 372px;
+    font-size: 20px;
+    color: #0d319c;
+    transition: 0.5s ease-out;
+}
+.Box_2__text_3{
+    font-family: 'Lato';
+    position: absolute;
+    top: 277px;
+    left: 630px;
+    font-size: 20px;
+    color: #0d319c;
+    transition: 0.5s ease-out;
+}
+.Box_2__text_4{
+    font-family: 'Lato';
+    position: absolute;
+    top: 487px;
+    left: 790px;
+    font-size: 20px;
+    color: #0d319c;
+    transition: 0.5s ease-out;
 }
 .Tab_3, .Tab_2, .Tab_1{
     z-index: 1;
@@ -238,81 +352,88 @@ body{
 .Tabs__view{
     overflow: hidden;
     position: relative;
-    /* margin-left: -2048px ;*/
     margin-top: -1px;
     height: 100%;
     width: 100%;
 }
 .Tabs__list{
-    transition: 1s ease-out;
+    transition: 0.6s ease-out;
     display: flex;
     left: -2048px;
     position: absolute;
 }
 .scroll__line{
-    top: 90vh;
+    bottom: 85px;
     display: flex;
-    left:275px;
+    left: 210px;
     z-index: 2;
-    width: 50vw;
-    height: 2vh;
+    width: 630px;
+    height: 11px;
     position: absolute;
 }
 .scroll__line_white{
+    border: 1px solid #8294a7;
     left:0;
     position: absolute;
     background: #d1eaff;
     height: 100%;
-    width: 300px;
 }
 .scroll__line_black{
+    border: 1px solid #273143;
     right:0;
     position: absolute;
-    width: 250px;
     height: 100%;
     background: #435063;
 }
 .scroll__tab{
     z-index: 8;
-    top: 88.5vh;
+    bottom: 63px;
     background: url('./img/scroll_button.png') no-repeat center top /contain;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     position: fixed;
 }
 .transition_on{
-    transition: 1s ease-out;
+    transition: 0.4s ease-out;
 }
 .scroll__text_1, .scroll__text_2, .scroll__text_3{
+    font-size: 20px;
+    font-family: "Gotham Pro";
     z-index: 6;
     display: block;
-    top: 94.5vh;
-    font-weight: bold;
+    bottom: 36px;
     position: absolute;
     color: #fff;
-    bottom: -6vh;
 }
 .scroll__text_1{
-    left: 27%;
+    left: 200px;
 }
 .scroll__text_2{
     left: 50%;
 }
 .scroll__text_3{
-    left: 73%;
+    left: 800px;
 }
 
 .circle_1{
-    margin: 52vh 0 0 279px;
+    transition: 0.5s ease-out;
+    top: 426px;
+    left: 273px;
 }
 .circle_2{
-    margin: 66vh 0 0 479px;
+    transition: 0.5s ease-out;
+    top: 538px;
+    left: 480px;
 }
 .circle_3{
-    margin: 30vh 0 0 562px;
+    transition: 0.5s ease-out;
+    top: 260px;
+    left: 561px;
 }
 .circle_4{
-    margin: 63vh 0 0 821px;
+    transition: 0.5s ease-out;
+    top: 518px;
+    left: 821px;
 }
 .Circle__outer{
     display: flex;
@@ -333,7 +454,6 @@ body{
     left: 50%;
     width: 60px;
     height: 60px;
-  /*  margin: -10px 0 0 -10px;*/
     border: 2px solid #F69733;
     animation: increase  2s infinite ease-out;
 }
@@ -363,16 +483,4 @@ body{
         transform: scale(1);
         }
 }
-/*.Circle__inner{
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    margin: -10px 0 0 -10px;
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    border: 10px solid #F69733;
-    border-radius: 9px;
-    background-color: black;
-}*/
+

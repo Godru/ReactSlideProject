@@ -6,13 +6,18 @@ class Circle extends Component {
         super(props);
         this.state = {
             size: this.props.size,
-            className: this.props.className
+            className: this.props.className,
+            top: undefined
         }
+    }
+    componentWillReceiveProps(nextProps){
+        this.setState({top: nextProps.top})
     }
     render() {
         return (
             <div className={"Circle__outer " + this.state.className}
                 style = {{
+                    top: this.state.top,
                     borderWidth: this.state.size/15,
                     width: this.state.size - this.state.size/17*2,
                     height: this.state.size - this.state.size/17*2

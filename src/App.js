@@ -112,17 +112,11 @@ class App extends Component {
     scrollEnd(){
         this.setState({transition:'transition_on'});
         switch(this.state.activeTab){
-            case 1: this.setState({ marginScroll: 215,
-                                    widthScrollWhite: 20,
-                                    widthScrollBlack: 610});
+            case 1: this.setState({ marginScroll: 215});
                     break;
-            case 2: this.setState({ marginScroll: 540,
-                                    widthScrollWhite: 330,
-                                    widthScrollBlack: 290});
+            case 2: this.setState({ marginScroll: 540});
                     break;
-            case 3: this.setState({ marginScroll: 820,
-                                    widthScrollWhite: 610,
-                                    widthScrollBlack: 20});
+            case 3: this.setState({ marginScroll: 820});
                     break;
         }
     }

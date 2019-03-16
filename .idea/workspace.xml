@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b94a8feb-7d74-4c9f-8233-7d86a30934a0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Fonts/GothamPro-Light.ttf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Fonts/GothamPro.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Fonts/Lato-Regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/box_1old.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/iceblock1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/iceblock2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/iceblock3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/iceblock4.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/img/box_1.png" afterPath="$PROJECT_DIR$/src/img/box_1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/img/box_2.png" afterPath="$PROJECT_DIR$/src/img/box_2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/img/box_2old.png" afterPath="$PROJECT_DIR$/src/img/box_2old.png" />
@@ -299,12 +306,12 @@
       <workItem from="1550410331677" duration="31000" />
       <workItem from="1552660402486" duration="17799000" />
       <workItem from="1552682642356" duration="5911000" />
-      <workItem from="1552728344043" duration="8195000" />
+      <workItem from="1552728344043" duration="8601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139817000" />
+    <option name="totallyTimeSpent" value="140223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="362" y="52" width="1487" height="889" extended-state="0" />

@@ -13,6 +13,8 @@ class App extends Component {
     constructor(props){
         super(props);
         this.state = {
+            showApp: 'none',
+            showErr: 'none',
             timerMin: 10,
             timerSec: '0',
             activeSlide: 1,
@@ -79,6 +81,14 @@ class App extends Component {
     swipeSlideDown(){
         if(this.state.activeSlide > 1 && this.state.activeTab === 3)
             this.setState(this.changeSlide(this.state.activeSlide - 1,this.state))
+    }
+    componentWillMount(){
+        if (navigator.userAgent.search(/Chrome/) > 0  && (window.matchMedia('(width: 1024px)').matches)
+            && (window.matchMedia('(height: 768px)').matches)){
+            this.setState({ showApp: 'block'})
+        }else{
+            this.setState({ showErr: 'block'})
+        }
     }
     scroll(e){
         this.setState({transition:''});
@@ -162,43 +172,47 @@ class App extends Component {
         }
 
     }
+    //
     render() {
     return (
-        <div onTouchStart={this.swipeSlideStart} onTouchEnd={this.swipeSlideEnd} onTouchMove={this.swipeSlide} className="App">
-            <Box_2 margin ={this.state.marginBox} activeSlide ={this.state.activeSlide}/>
-            <Box_1 activeSlide ={this.state.activeSlide}/>
-            <div className="Tabs__view">
-                <div style={{left: this.state.buttonsHide}} className="slide__buttons">
-                    <button onClick={(e) => this.clickChangeSlide(1)} style = {this.sliderColor(1)} className="Slide_Button"/>
-                    <button onClick={(e) => this.clickChangeSlide(2)} style = {this.sliderColor(2)} className="Slide_Button"/>
-                    <button onClick={(e) => this.clickChangeSlide(3)} style = {this.sliderColor(3)} className="Slide_Button"/>
+        <div className="show">
+            <div style = {{display: this.state.showApp}} onTouchStart={this.swipeSlideStart} onTouchEnd={this.swipeSlideEnd} onTouchMove={this.swipeSlide} className="App">
+                <Box_2 margin ={this.state.marginBox} activeSlide ={this.state.activeSlide}/>
+                <Box_1 activeSlide ={this.state.activeSlide}/>
+                <div className="Tabs__view">
+                    <div style={{left: this.state.buttonsHide}} className="slide__buttons">
+                        <button onClick={(e) => this.clickChangeSlide(1)} style = {this.sliderColor(1)} className="Slide_Button"/>
+                        <button onClick={(e) => this.clickChangeSlide(2)} style = {this.sliderColor(2)} className="Slide_Button"/>
+                        <button onClick={(e) => this.clickChangeSlide(3)} style = {this.sliderColor(3)} className="Slide_Button"/>
+                    </div>
+                    <div className="scroll__line">
+                        <div style={{width: this.state.marginScroll - 200}} className={"scroll__line_white " + this.state.transition}/>
+                        <div style={{width: 630 - this.state.marginScroll + 200}} className={"scroll__line_black " + this.state.transition}/>
+                    </div>
+                    <div style = {{left: this.state.marginScroll-20, position: 'absolute'}} onTouchEnd={this.scrollEnd} onTouchMove={this.scroll} className={"scroll__tab " + this.state.transition}/>
+                    <div className="scroll__text_1">1988</div>
+                    <div className="scroll__text_2">2009</div>
+                    <div className="scroll__text_3">2016</div>
+                    <div style ={{left: this.state.marginTab}} className="Tabs__list">
+                        <Tab_1/><Tab_2/><Tab_3/>
+                    </div>
                 </div>
-                <div className="scroll__line">
-                    <div style={{width: this.state.marginScroll - 200}} className={"scroll__line_white " + this.state.transition}/>
-                    <div style={{width: 630 - this.state.marginScroll + 200}} className={"scroll__line_black " + this.state.transition}/>
-                </div>
-                <div style = {{left: this.state.marginScroll-20, position: 'absolute'}} onTouchEnd={this.scrollEnd} onTouchMove={this.scroll} className={"scroll__tab " + this.state.transition}/>
-                <div className="scroll__text_1">1988</div>
-                <div className="scroll__text_2">2009</div>
-                <div className="scroll__text_3">2016</div>
-                <div style ={{left: this.state.marginTab}} className="Tabs__list">
-                    <Tab_1/><Tab_2/><Tab_3/>
+                <button onClick={(e) => this.clickChangeSlide(3)} style = {{display: this.state.downButtonActive}} className="down__button"/>
+                <div className="control__buttons">
+                    <button className="control__button button_1" style={{top: this.state.controlSpace[0],opacity: this.state.controlOpacity}}><div className="camera__block_1"/><div className="camera__block_2"/><div className="camera__block_3"/><div className="camera__block_4"/><div className="camera__block_5"/></button>
+                    <button className="control__button button_2" style={{top: this.state.controlSpace[1],opacity: this.state.controlOpacity}}><div className="cancel__block_1"/><div className="cancel__block_2"/></button>
+                    <button className="control__button button_3" style={{top: this.state.controlSpace[2],opacity: this.state.controlOpacity}}><div className="confirm__block_1"/><div className="confirm__block_2"/></button>
+                    <button className="control__button button_4" style={{top: this.state.controlSpace[3],opacity: this.state.controlOpacity}}><div className="pause__block_1"/><div className="pause__block_2"/></button>
+                    <div className="control__panel">
+                        <button className="control__open" onClick={this.controlOpenClose}>...</button>
+                        <div className="control__timer"><FontAwesomeIcon className='clock' icon={faClock}/>{this.state.timerMin}:{this.state.timerSec}</div>
+                    </div>
                 </div>
             </div>
-            <button onClick={(e) => this.clickChangeSlide(3)} style = {{display: this.state.downButtonActive}} className="down__button"/>
-            <div className="control__buttons">
-                <button className="control__button button_1" style={{top: this.state.controlSpace[0],opacity: this.state.controlOpacity}}><div className="camera__block_1"/><div className="camera__block_2"/><div className="camera__block_3"/><div className="camera__block_4"/><div className="camera__block_5"/></button>
-                <button className="control__button button_2" style={{top: this.state.controlSpace[1],opacity: this.state.controlOpacity}}><div className="cancel__block_1"/><div className="cancel__block_2"/></button>
-                <button className="control__button button_3" style={{top: this.state.controlSpace[2],opacity: this.state.controlOpacity}}><div className="confirm__block_1"/><div className="confirm__block_2"/></button>
-                <button className="control__button button_4" style={{top: this.state.controlSpace[3],opacity: this.state.controlOpacity}}><div className="pause__block_1"/><div className="pause__block_2"/></button>
-                <div className="control__panel">
-                    <button className="control__open" onClick={this.controlOpenClose}>...</button>
-                    <div className="control__timer"><FontAwesomeIcon className='clock' icon={faClock}/>{this.state.timerMin}:{this.state.timerSec}</div>
-                </div>
-            </div>
+            <h1 style = {{display: this.state.showErr}} className="Err">Данное приложение работает только в Google Chrome в совместимости с разрешением 1024 х 768</h1>
         </div>
     );
   }
 }
-
+//
 export default App;
